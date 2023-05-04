@@ -31,3 +31,9 @@ int main() {
 
   return 0;
 }
+
+
+2.const message = "HELLO WORLD!";
+const upperCaseMessage = message.toUpperCase();
+console.log(upperCaseMessage);
+
