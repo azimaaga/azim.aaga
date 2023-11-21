@@ -1,218 +1,93 @@
-1. #include <iostream>
-using namespace std;
+1. import javax.swing.*;
+   import java.awt.*;
 
-// Define an inline function to find the maximum of two numbers
-inline int max(int x, int y) {
-  return (x > y) ? x : y;
+class Slip20A {
+
+    public static void main(String args[]) {
+
+        JFrame frame = new JFrame("TYBBACA");
+
+        frame.setSize(400, 400);
+
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        frame.getContentPane().setBackground(Color.RED);
+
+        frame.setVisible(true);
+
+    }
+
 }
 
-// Define an inline function to find the minimum of two numbers
-inline int min(int x, int y) {
-  return (x < y) ? x : y;
-}
 
-int main() {
-  int a, b;
+2. import java.util.*;
 
-  // Get input from user
-  cout << "Enter the first number: ";
-  cin >> a;
+    public class Slip20B{
 
-  cout << "Enter the second number: ";
-  cin >> b;
+        public static void main (String args[]){
 
-  // Use the inline functions to find the maximum and minimum
-  int maxNum = max(a, b);
-  int minNum = min(a, b);
+            LinkedList al = new LinkedList<>();
 
-  // Output the results
-  cout << "The maximum of " << a << " and " << b << " is " << maxNum << endl;
-  cout << "The minimum of " << a << " and " << b << " is " << minNum << endl;
+            al.add("CPP");
 
-  return 0;
-  
+            al.add("JAVA");
 
-2.
-#include <stdlib.h>
-#include <ctype.h>
-#include <iostream>
-#include <string.h>
+            al.add("Python");
 
-using namespace std;
+            al.add("PHP");
 
-#define MAXSIZE (10)
+            System.out.println("Display content using Iterator...");
 
-class myfile {
-    FILE* fp;
-    char fn[MAXSIZE];
+            Iterator il=al.iterator();
 
-public:
-    myfile(const char* fname) {
-        strcpy(fn, fname);
+            while(il.hasNext()){
+
+                System.out.println(il.next());
+
+            }
+
+            System.out.println("Display Content Revverse Using ListIterator");
+
+            ListIterator li1=al.listIterator();
+
+            while(li1.hasNext()){
+
+                li1.next();
+
+            }
+
+            while(li1.hasPrevious()){
+
+                System.out.println("" + li1.previous());
+
+            }
+
+        }
+
     }
-    myfile operator+(myfile& f2);
-    void operator!();
-    void display();
-};
-
-void myfile::display() {
-    fp = fopen(fn, "r");
-    if (fp == NULL) {
-        cout << "c++ " << fn << endl;
-        return;
-    }
-    char ch;
-    while ((ch = fgetc(fp)) != EOF) {
-        cout << ch;
-    }
-    fclose(fp);
-}
-
-void myfile::operator!() {
-    myfile f4("sy.txt");
-    char ch;
-    fp = fopen(fn, "r");
-    if (fp == NULL) {
-        cout << "node js " << fn << endl;
-        return;
-    }
-    f4.fp = fopen(f4.fn, "w");
-    if (f4.fp == NULL) {
-        cout << "operating system " << f4.fn << endl;
-        return;
-    }
-    while ((ch = fgetc(fp)) != EOF) {
-        if (isupper(ch))
-            fputc(tolower(ch), f4.fp);
-        else if (islower(ch))
-            fputc(toupper(ch), f4.fp);
-        else
-            fputc(ch, f4.fp);
-    }
-    fclose(fp);
-    fclose(f4.fp);
-    remove(fn); 
-    rename(f4.fn, fn); 
-}
-
-myfile myfile::operator+(myfile& f2) {
-    myfile f3("abc.txt");
-    fp = fopen(fn, "r");
-    if (fp == NULL) {
-        cout << "c++ " << fn << endl;
-        return myfile("");
-    }
-    f2.fp = fopen(f2.fn, "r");
-    if (f2.fp == NULL) {
-        cout << "node js " << f2.fn << endl;
-        return myfile("");
-    }
-    f3.fp = fopen(f3.fn, "w");
-    if (f3.fp == NULL) {
-        cout << "operating system " << f3.fn << endl;
-        return myfile("");
-    }
-    char ch;
-    while ((ch = fgetc(fp)) != EOF) {
-        fputc(ch, f3.fp);
-    }
-    fclose(fp);
-    while ((ch = fgetc(f2.fp)) != EOF) {
-        fputc(ch, f3.fp);
-    }
-    fclose(f2.fp);
-    fclose(f3.fp);
-    return f3;
-}
-
-int main() {
-    myfile f1("xyz.txt");
-    myfile f2("lmn.txt");
-    myfile f3("abc.txt");
-
-    cout << "First file: " << endl;
-    f1.display();
-    cout << "\nSecond file: " << endl;
-    f2.display();
-
-    f3 = f1 + f2;
-    cout << "\nAfter concatenation, the file is: " << endl;
-    f3.display();
-
-    cout << "\nAfter changing case:" << endl;
-    !f3;
-    f3.display();
-
-    return 0;
-}
-
-3.const message = "HELLO WORLD!";
-const upperCaseMessage = message.toUpperCase();
-console.log(upperCaseMessage);
-
-
-4.
-var mysql = require('mysql');
-
-var con = mysql.createConnection({
-
-  host: "localhost",
-
-  user: "root",
-
-  password: "root"
-
-});
-
-con.connect(function(err) {
-
-  if (err) throw err;
-
-  console.log("Connected!");
-
-  con.query("CREATE DATABASE studentdb", function (err, result) {
-
-    if (err) throw err;
-
-    console.log("Database created");
-
-  });
-
-});
-
-create_table.js
-
-var mysql = require('mysql');
-
-var con = mysql.createConnection({
-
-  host: "localhost",
-
-  user: "root",
-
-  password: "root",
-
-  database: "studentdb"
-
-});
-
-con.connect(function(err) {
-
-  if (err) throw err;
-
-  console.log("Connected!");
 
 
 
-  var sql = "CREATE TABLE student(rollno int,name VARCHAR(255), percentage double)";
+   3.from math import pi
+class Circle():
+    def __init__(self,Radius):
+        self.Radius=Radius
+    def area(self):
+        a=pi*self.Radius*self.Radius      
+        return round(a,2)
+    def circumference(self):
+        c=2*self.Radius*pi
+        return round(c,2)
+    
+r= int(input('enter radius of circle : '))
+a=Circle(r)
+print('Area of circle is : ',a.area())
+print('Circumference of circle is : ',a.circumference())
 
-  con.query(sql, function (err, result) {
-
-    if (err) throw err;
-
-    console.log("Table created");
-
-  });
 
 
-})
+4.n=int(input("Input a number : "))
+d ={}
+for x in range(1,n+1):
+    d[x]=x*x
+print(d)
