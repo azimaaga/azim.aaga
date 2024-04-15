@@ -1,4 +1,5 @@
-Q1 . Slip5.html
+Q1.
+Slip5.html
 <html>
       <head>
             <title> Slip 5
@@ -41,8 +42,8 @@ Web.xml
  </welcome-file-list>
 </web-app>
 
-
-Q2. import java.applet.*;
+Q2.
+import java.applet.*;
 import java.awt.*;
 
 
@@ -97,7 +98,9 @@ public class Slip333 extends Applet implements Runnable
 	}
 }
 
-Q3. <?xml version="1.0" encoding="utf-8"?>
+
+Q3.
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -109,7 +112,7 @@ Q3. <?xml version="1.0" encoding="utf-8"?>
         android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Poona College"
+        android:text="Ness Wadia College of Commerce"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -233,7 +236,9 @@ public class MainActivity extends AppCompatActivity {
 }
 
 
-Q4.<?xml version="1.0" encoding="utf-8"?>
+Q4.
+
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
